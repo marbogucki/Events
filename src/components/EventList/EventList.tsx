@@ -2,7 +2,7 @@ import React from 'react';
 import events from '../../database.json';
 import { Event } from '../Event';
 import { EventListStyled } from './EventList.style';
-import { EventItem } from '../Event/Event.model';
+import { EventItem } from 'components/Event/Event.model';
 
 export const EventList = () => (
   <EventListStyled>

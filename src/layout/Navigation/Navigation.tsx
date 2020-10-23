@@ -1,12 +1,24 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { NavigationStyled } from './Navigation.style';
+import {
+  NavigationItem,
+  NavigationList,
+  NavigationStyled,
+  NavLinkStyled,
+} from './Navigation.style';
 
-export const Navigation = () => {
-  return (
-    <NavigationStyled>
-      <NavLink to="/">Events</NavLink>
-      <NavLink to="/about">About</NavLink>
-    </NavigationStyled>
-  );
-};
+export const Navigation = () => (
+  <NavigationStyled>
+    <NavigationList>
+      <NavigationItem>
+        <NavLinkStyled to="/events" activeClassName="active">
+          Events
+        </NavLinkStyled>
+      </NavigationItem>
+      <NavigationItem>
+        <NavLinkStyled to="/about" activeClassName="active">
+          About
+        </NavLinkStyled>
+      </NavigationItem>
+    </NavigationList>
+  </NavigationStyled>
+);

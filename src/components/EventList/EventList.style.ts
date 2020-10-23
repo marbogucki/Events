@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { breakpoints } from '../../style/breakpoints';
+import { breakpoints } from 'style/breakpoints';
 
 export const EventListStyled = styled.section`
   margin: 20px;

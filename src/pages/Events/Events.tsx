@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { EventList } from '../../components/EventList';
+import { EventList } from 'components/EventList';
 
 export const Events = () => {
   return (
