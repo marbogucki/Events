@@ -1,0 +1,40 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "title": "Koncert Fasolek",
+      "description": "Opis wydarzenia",
+      "cover_url": "Adres URL do cover foto wydarzenia",
+      "price": "50",
+      "city": "Gdańsk",
+      "category": "concert",
+      "address": "Grunwaldzka 15",
+      "date": "03.12.2021",
+      "hour": "07:00"
+    },
+    {
+      "id": 2,
+      "title": "Carlos Santana feat Fasolki",
+      "description": "Lorem ipsum sit dolor",
+      "cover_url": "https://static.billboard.com/files/media/santana-june-20-2019-billboard-1548-1024x677.jpg",
+      "price": "130",
+      "city": "Mexico",
+      "address": "El Gato 12",
+      "date": "28.05.2021",
+      "category": "concert",
+      "hour": "18:00"
+    },
+    {
+      "id": 3,
+      "title": "Spotkanie meet.js",
+      "description": "Lorem ipsum sit dolor",
+      "cover_url": "https://secure.meetupstatic.com/photos/event/8/a/6/2/600_472835426.jpeg",
+      "price": "0",
+      "city": "Katowice",
+      "address": "Górnicza 8",
+      "date": "20.06.2021",
+      "category": "event",
+      "hour": "17:00"
+    }
+  ]
+}
