@@ -1,10 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { EventList } from 'components/EventList';
 
-export const Events = () => {
-  return (
-    <Fragment>
-      <EventList />
-    </Fragment>
-  );
-};
+export const Events = () => <EventList />;
