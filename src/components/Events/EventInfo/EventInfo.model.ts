@@ -1,4 +1,4 @@
-import { EventItem } from 'components/Event/Event.model';
+import { EventItem } from 'components/Events/Event/Event.model';
 
 export type EventParams = {
   id: string | undefined;
