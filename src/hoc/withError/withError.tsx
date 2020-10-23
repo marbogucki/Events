@@ -7,7 +7,6 @@ type WithErrorProps = {
 
 export const withError = <T extends {}>(WrappedComponent: ComponentType<T>) => {
   return ({ error, ...props }: WithErrorProps) => {
-    console.log('error', error);
     return error ? <ErrorInfo /> : <WrappedComponent {...(props as T)} />;
   };
 };

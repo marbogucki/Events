@@ -15,4 +15,7 @@ export const EventList = ({ events }: any) => {
   );
 };
 
-export default compose<any, any>(withLoading, withError)(EventList);
+export const EventListWithLoadingAndError = compose<any, any>(
+  withLoading,
+  withError
+)(EventList);

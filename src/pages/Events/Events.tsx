@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Config } from 'config';
 import { EventItem } from 'components/Events/Event/Event.model';
-import EventList from 'components/Events/EventList/EventList';
+import { EventListWithLoadingAndError } from 'components';
 
 export const Events = () => {
   const [events, setEvents] = useState<EventItem[]>([]);
@@ -27,5 +27,11 @@ export const Events = () => {
     fetchEvents();
   }, []);
 
-  return <EventList loading={loading} error={error} events={events} />;
+  return (
+    <EventListWithLoadingAndError
+      loading={loading}
+      error={error}
+      events={events}
+    />
+  );
 };

@@ -11,4 +11,7 @@ const EventInfo = ({ event }: any) => (
   </section>
 );
 
-export default compose<any, any>(withLoading, withError)(EventInfo);
+export const EventInfoWithLoadingAndError = compose<any, any>(
+  withLoading,
+  withError
+)(EventInfo);

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { Config } from 'config';
-import EventInfo from 'components/Events/EventInfo/EventInfo';
+import { EventInfoWithLoadingAndError } from 'components';
 import {
   EventDetail,
   EventParams,
@@ -33,5 +33,11 @@ export const EventDetails = () => {
     fetchEvent();
   }, [id]);
 
-  return <EventInfo loading={loading} error={error} event={event} />;
+  return (
+    <EventInfoWithLoadingAndError
+      loading={loading}
+      error={error}
+      event={event}
+    />
+  );
 };
