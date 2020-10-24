@@ -8,9 +8,10 @@ import { EventItem } from 'components/Events/Event/Event.model';
 export const EventList = ({ events }: any) => {
   return (
     <EventListStyled>
-      {events.map((event: EventItem) => (
-        <Event key={event.id} event={event} />
-      ))}
+      {events &&
+        events.map((event: EventItem) => (
+          <Event key={event.id} event={event} />
+        ))}
     </EventListStyled>
   );
 };

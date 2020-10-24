@@ -1,31 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React from 'react';
 import { Config } from 'config';
 import { EventItem } from 'components/Events/Event/Event.model';
 import { EventListWithLoadingAndError } from 'components/Events';
+import { useApi } from 'hooks';
 
 export const EventsPage = () => {
-  const [events, setEvents] = useState<EventItem[]>([]);
-  const [error, setError] = useState<string | null>(null);
-  const [loading, setLoading] = useState<boolean | null>(false);
-
-  useEffect(() => {
-    setLoading(true);
-    const fetchEvents = async () => {
-      try {
-        const { data } = await axios.get(`${Config.URL_API}/events`);
-        setEvents(data);
-      } catch (error) {
-        setError(error);
-      } finally {
-        setTimeout(() => {
-          setLoading(false);
-        }, 1000);
-      }
-    };
-
-    fetchEvents();
-  }, []);
+  const { data: events, loading, error } = useApi<EventItem>(
+    `${Config.URL_API}/events`
+  );
 
   return (
     <>
