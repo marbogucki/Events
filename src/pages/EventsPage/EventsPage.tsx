@@ -28,10 +28,12 @@ export const EventsPage = () => {
   }, []);
 
   return (
-    <EventListWithLoadingAndError
-      loading={loading}
-      error={error}
-      events={events}
-    />
+    <>
+      <EventListWithLoadingAndError
+        loading={loading}
+        error={error}
+        events={events}
+      />
+    </>
   );
 };
