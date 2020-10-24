@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { Config } from 'config';
-import { EventInfoWithLoadingAndError } from 'components';
+import { EventInfoWithLoadingAndError } from 'components/Events';
 import {
   EventDetail,
   EventParams,
 } from 'components/Events/EventInfo/EventInfo.model';
 
-export const EventDetails = () => {
+export const EventDetailsPage = () => {
   const { id }: EventParams = useParams();
   const [event, setEvent] = useState<EventDetail | null>(null);
   const [error, setError] = useState<string | null>(null);

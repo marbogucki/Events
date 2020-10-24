@@ -1,3 +1,3 @@
-export * from './About';
-export * from './Events';
-export * from './EventDetails';
+export * from './AboutPage';
+export * from './EventsPage';
+export * from './EventDetailsPage';

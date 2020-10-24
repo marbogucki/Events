@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Config } from 'config';
 import { EventItem } from 'components/Events/Event/Event.model';
-import { EventListWithLoadingAndError } from 'components';
+import { EventListWithLoadingAndError } from 'components/Events';
 
-export const Events = () => {
+export const EventsPage = () => {
   const [events, setEvents] = useState<EventItem[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean | null>(false);
