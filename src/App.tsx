@@ -6,7 +6,6 @@ import { AppRouting } from './AppRouting';
 const App = () => {
   const [toggleMenu, setToggleMenu] = React.useState<boolean>(false);
   const handleToggleMenu = () => setToggleMenu((toggleMenu) => !toggleMenu);
-  const handleMenu = (status: boolean) => () => setToggleMenu(status);
 
   return (
     <div>
@@ -14,7 +13,7 @@ const App = () => {
       <Router>
         <NavigationSidebar
           toggleMenu={toggleMenu}
-          handleMenu={handleMenu(false)}
+          handleMenu={handleToggleMenu}
         />
         <Main>
           <AppRouting />
