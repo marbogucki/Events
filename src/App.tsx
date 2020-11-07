@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Header, Main, NavigationSidebar } from 'layout';
-import { AppRouting } from './AppRouting';
+import { AppRoutes } from './AppRoutes';
 
 const App = () => {
-  const [toggleNav, setToggleNav] = React.useState<boolean>(false);
+  const [toggleNav, setToggleNav] = useState<boolean>(false);
   const handleToggleNav = () => setToggleNav((toggleNav) => !toggleNav);
 
   return (
@@ -13,7 +13,7 @@ const App = () => {
       <Router>
         <NavigationSidebar toggleNav={toggleNav} handleNav={handleToggleNav} />
         <Main>
-          <AppRouting />
+          <AppRoutes />
         </Main>
       </Router>
     </div>

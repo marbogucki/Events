@@ -1,1 +1,1 @@
-export * from './MaterialPage';
+export { default as MaterialPage } from './MaterialPage';
