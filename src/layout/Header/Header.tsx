@@ -3,8 +3,8 @@ import { AppBar, IconButton, Toolbar } from '@material-ui/core';
 import { MenuIconStyled, TypographyStyled } from './Header.styled';
 import { HeaderProps } from './Header.model';
 
-const Header = ({ title, onToggleMenu }: HeaderProps) => {
-  const handleToggleMenu = () => onToggleMenu();
+const Header = ({ title, handleNav }: HeaderProps) => {
+  const handleToggleNav = () => handleNav();
 
   return (
     <AppBar position="static">
@@ -13,7 +13,7 @@ const Header = ({ title, onToggleMenu }: HeaderProps) => {
           edge="start"
           color="inherit"
           aria-label="menu"
-          onClick={handleToggleMenu}
+          onClick={handleToggleNav}
         >
           <MenuIconStyled />
         </IconButton>

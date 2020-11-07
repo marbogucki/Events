@@ -4,17 +4,14 @@ import { Header, Main, NavigationSidebar } from 'layout';
 import { AppRouting } from './AppRouting';
 
 const App = () => {
-  const [toggleMenu, setToggleMenu] = React.useState<boolean>(false);
-  const handleToggleMenu = () => setToggleMenu((toggleMenu) => !toggleMenu);
+  const [toggleNav, setToggleNav] = React.useState<boolean>(false);
+  const handleToggleNav = () => setToggleNav((toggleNav) => !toggleNav);
 
   return (
     <div>
-      <Header title="Dashboard" onToggleMenu={handleToggleMenu} />
+      <Header title="Dashboard" handleNav={handleToggleNav} />
       <Router>
-        <NavigationSidebar
-          toggleMenu={toggleMenu}
-          handleMenu={handleToggleMenu}
-        />
+        <NavigationSidebar toggleNav={toggleNav} handleNav={handleToggleNav} />
         <Main>
           <AppRouting />
         </Main>

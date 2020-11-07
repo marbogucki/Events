@@ -1,8 +1,12 @@
 import React from 'react';
 import { SwipeableDrawer } from '@material-ui/core';
 import { NavigationList } from 'layout';
+import { NavigationSidebarProps } from './NavigationSidebar.model';
 
-const NavigationSidebar = ({ toggleMenu, handleMenu }: any) => {
+const NavigationSidebar = ({
+  toggleNav,
+  handleNav,
+}: NavigationSidebarProps) => {
   const toggleDrawer = (open: boolean) => (
     event: React.KeyboardEvent | React.MouseEvent
   ) => {
@@ -15,19 +19,19 @@ const NavigationSidebar = ({ toggleMenu, handleMenu }: any) => {
       return;
     }
 
-    handleMenu(open);
+    handleNav(open);
   };
 
   return (
     <>
       <SwipeableDrawer
         anchor="left"
-        open={toggleMenu}
+        open={toggleNav}
         onClose={toggleDrawer(false)}
         onOpen={toggleDrawer(true)}
       >
         <div style={{ width: '300px' }}>
-          <NavigationList />
+          <NavigationList handleCloseNav={toggleDrawer(false)} />
         </div>
       </SwipeableDrawer>
     </>

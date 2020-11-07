@@ -1,4 +1,4 @@
 export type HeaderProps = {
   title: string;
-  onToggleMenu: () => void;
+  handleNav: () => void;
 };

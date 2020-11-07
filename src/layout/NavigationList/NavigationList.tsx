@@ -1,14 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { List, ListItem, ListItemText } from '@material-ui/core';
-import { NavItem } from './NavigationList.model';
+import { NavigationListProps, NavItem } from './NavigationList.model';
 import { navItems } from './NavigationItems';
 
-const NavigationList = () => {
+const NavigationList = ({ handleCloseNav }: NavigationListProps) => {
   return (
     <List component="nav">
       {navItems.map(({ url, label }: NavItem) => (
-        <ListItem button divider component={Link} to={url}>
+        <ListItem
+          key={url}
+          button
+          divider
+          component={Link}
+          to={url}
+          onClick={handleCloseNav}
+        >
           <ListItemText primary={label} />
         </ListItem>
       ))}
