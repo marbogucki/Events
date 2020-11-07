@@ -1,3 +1,4 @@
+import MaterialPage from 'pages/MaterialPage/MaterialPage';
 import React from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
 import { AboutPage, EventsPage, EventDetailsPage } from './pages';
@@ -19,6 +20,10 @@ export const AppRouting = () => {
 
       <Route path="/about">
         <AboutPage />
+      </Route>
+
+      <Route path="/material">
+        <MaterialPage />
       </Route>
     </Switch>
   );
