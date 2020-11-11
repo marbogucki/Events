@@ -19,6 +19,11 @@ export const Navigation = () => (
           About
         </NavLinkStyled>
       </NavigationItem>
+      <NavigationItem>
+        <NavLinkStyled to="/concerts" activeClassName="active">
+          Concerts
+        </NavLinkStyled>
+      </NavigationItem>
     </NavigationList>
   </NavigationStyled>
 );

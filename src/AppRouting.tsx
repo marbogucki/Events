@@ -1,6 +1,6 @@
 import React from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
-import { AboutPage, EventsPage, EventDetailsPage } from './pages';
+import { AboutPage, ConcertPage, EventsPage, EventDetailsPage } from './pages';
 
 export const AppRouting = () => {
   return (
@@ -19,6 +19,10 @@ export const AppRouting = () => {
 
       <Route path="/about">
         <AboutPage />
+      </Route>
+
+      <Route path="/concerts">
+        <ConcertPage />
       </Route>
     </Switch>
   );
